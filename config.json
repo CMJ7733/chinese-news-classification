@@ -1,0 +1,27 @@
+{
+  "model_type": "bert",
+  "data_path": "data/raw/Train.txt",
+  "output_dir": "results",
+  "model_dir": "models",
+  "batch_size": 16,
+  "num_epochs": 5,
+  "learning_rate": 2e-5,
+  "max_length": 512,
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "random_state": 42,
+  "save_best": true,
+  "early_stopping_patience": 3,
+  "textcnn_config": {
+    "vocab_size": 20000,
+    "embedding_dim": 100,
+    "filter_sizes": [3, 4, 5],
+    "num_filters": 100,
+    "dropout_rate": 0.5
+  },
+  "bert_config": {
+    "model_name": "bert-base-chinese",
+    "dropout_rate": 0.3,
+    "freeze_bert": false
+  }
+}
